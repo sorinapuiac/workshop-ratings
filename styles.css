@@ -42,4 +42,14 @@ body * + * {
 .stars > * {
   color: #ccc;
   font-size: 2em;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.stars:hover > * {
+  color: green; 
+}
+
+.stars > *:hover ~ * {
+  color: #ccc;
 }
