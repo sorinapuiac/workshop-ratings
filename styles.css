@@ -42,6 +42,8 @@ body * + * {
   padding: 0.5em;
   background: green;
   color: purple;
+  font-weight: bold;
+  text-decoration: none;
   display: inline-block;
 }
 
