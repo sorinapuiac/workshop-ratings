@@ -24,10 +24,17 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
+      window.clean = true;
       $('[class^="star-"]').on('click', function() {
         $(this).siblings().removeClass('selected');
         $(this).addClass('selected');
         $(this).prevAll().addClass('selected');
+      });
+      $('.button').on('click', function() {
+        if (clean) {
+          $('.form').remove();
+          $('<div class="submitted">Thank you for your review!</div>').insertAfter('h2');
+        }
       });
     </script>
   </body>
