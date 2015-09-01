@@ -54,7 +54,7 @@ body * + * {
 }
 
 .stars:hover > * {
-  text-shadow: 0 0 0 3px yellow;
+  text-shadow: 0 0 5px yellow;
 }
 
 .stars:hover > *, .stars > .selected {
