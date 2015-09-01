@@ -80,7 +80,7 @@ body * + * {
  text-align: center;
  font-weight: bold;
  color: #fff;
- color: #2D9F09;
+ background: #2D9F09;
 }
 
 .submitted::after {
