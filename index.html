@@ -22,12 +22,12 @@
       <a class="button" href="#">Submit review ></a>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    $('[class^="star-"]').on('click', function() {
-      var index = $(this).index();
-      var parent = $(this).parent('stars');
-      for (var i = 0; i <= index; i++) {
-        
-      }
-    });
+    <script>
+      $('[class^="star-"]').on('click', function() {
+        $(this).siblings().removeClass('selected');
+        $(this).addClass('selected');
+        $(this).prevAll().addClass('selected');
+      });
+    </script>
   </body>
 </html>
