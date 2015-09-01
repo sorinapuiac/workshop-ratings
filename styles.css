@@ -73,3 +73,16 @@ body * + * {
 .stars > *:hover ~ * {
   color: #ccc;
 }
+
+.submitted {
+ font-size: 1.5em; 
+ padding: 1em;
+ text-align: center;
+ font-weight: bold;
+}
+
+.submitted::after {
+ content: '\0020\2713'; 
+}
+}
+}
