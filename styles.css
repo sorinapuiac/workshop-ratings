@@ -53,8 +53,8 @@ body * + * {
   padding: 0 0.25em 0 0;
 }
 
-.stars:hover > * {
-  text-shadow: 0 0 5px yellow;
+.stars > *:hover {
+  text-shadow: 0 0 5px green;
 }
 
 .stars:hover > *, .stars > .selected {
