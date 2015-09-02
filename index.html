@@ -9,8 +9,7 @@
     <h2>Review your trip</h2>
     <div class="form">
       <p class="label">Your comments:</p>
-      <div class="comments" contenteditable="true">
-      </div>
+      <div class="comments" id="comments" contenteditable="true"></div>
       <p class="label">Rating:</p>
       <div class="stars">
         <span class="star-1">&#x2605;</span>
@@ -31,9 +30,14 @@
         $(this).prevAll().addClass('selected');
       });
       $('.button').on('click', function() {
-        if (clean) {
+        if ($('#comments').is(':empty')) {
+          window.clean = false; 
+        }
+        if (window.clean) {
           $('.form').remove();
           $('<div class="submitted">Thank you for your review!</div>').insertAfter('h2');
+        } else {
+          return;
         }
         return false;
       });
