@@ -8,6 +8,7 @@
   <body>
     <h2>Review your trip</h2>
     <div class="form">
+      <div class="errors"></div>
       <p class="label">Your comments:</p>
       <div class="comments" id="comments" contenteditable="true"></div>
       <p class="label">Rating:</p>
@@ -31,11 +32,14 @@
       });
       $('.button').on('click', function() {
         if ($('#comments').is(':empty')) {
-          window.clean = false; 
+          window.clean = false;
+          $('.errors').append('<p>Please submit a review.</p>');
         }
         if (window.clean) {
           $('.form').remove();
           $('<div class="submitted">Thank you for your review!</div>').insertAfter('h2');
+        } else {
+          
         }
         return false;
       });
