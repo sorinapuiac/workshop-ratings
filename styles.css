@@ -86,3 +86,9 @@ body * + * {
 .submitted::after {
  content: '\0020\2713'; 
 }
+
+.errors p {
+  padding: 1em;
+  background: #cc0000;
+  color: #fff;
+}
