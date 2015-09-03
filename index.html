@@ -30,7 +30,7 @@
         $(this).siblings().removeClass('selected');
         $(this).addClass('selected');
         $(this).prevAll().addClass('selected');
-        $('.you-rated').text('You rated '+$(this).index()+' stars');
+        $('.you-rated').text('You rated '+$(this).index()-1+' stars');
       });
       $('.button').on('click', function() {
         if ($('#comments').is(':empty')) {
