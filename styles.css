@@ -93,3 +93,7 @@ body * + * {
   background: #cc0000;
   color: #fff;
 }
+
+.your-rating {
+  margin-top: 0.125em;
+}
