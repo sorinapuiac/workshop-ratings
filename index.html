@@ -19,6 +19,7 @@
         <span class="star-4">&#x2605;</span>
         <span class="star-5">&#x2605;</span>
       </div>
+      <div class="you-rated"></div>
       <hr/>
       <a class="button" href="#">Submit review ></a>
     </div>
@@ -29,6 +30,7 @@
         $(this).siblings().removeClass('selected');
         $(this).addClass('selected');
         $(this).prevAll().addClass('selected');
+        $('.you-rated').text('You rated '+$(this).index()+' stars');
       });
       $('.button').on('click', function() {
         if ($('#comments').is(':empty')) {
@@ -38,8 +40,6 @@
         if (window.clean) {
           $('.form').remove();
           $('<div class="submitted">Thank you!</div>').insertAfter('h2');
-        } else {
-          
         }
         return false;
       });
